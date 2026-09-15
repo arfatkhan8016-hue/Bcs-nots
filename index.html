@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRTMUN Notes Portal - 1st Year</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div id="login-container" class="auth-wrapper">
+        <div class="auth-card">
+            <h2>SRTMUN Portal Login</h2>
+            <p>Access 1st Year (Sem 1 & Sem 2) Notes</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Student Name</label>
+                    <input type="text" id="username" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label>College Roll No / Email</label>
+                    <input type="text" id="email" placeholder="Enter roll number" required>
+                </div>
+                <button type="submit" class="btn-primary">Login to Portal</button>
+            </form>
+            <div class="creator-tag">
+                <p>Created by <span>Pathan Araft</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard (Hidden by default until login) -->
+    <div id="dashboard-container" class="dashboard-wrapper hidden">
+        <header>
+            <div class="logo">
+                <h2>SRTMUN Notes Hub</h2>
+                <span>Parbhani Colleges</span>
+            </div>
+            <div class="user-info">
+                <span id="display-user">Welcome, Student</span>
+                <button id="logout-btn" class="btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-banner">
+                <div class="hero-text">
+                    <h1>1st Year Engineering / Degree Notes</h1>
+                    <p>Semester 1 & Semester 2 All Subjects Study Material as per SRTMUN Syllabus.</p>
+                </div>
+            </section>
+
+            <!-- Semesters & Subjects Section -->
+            <div class="semesters-container">
+                <!-- Semester 1 -->
+                <div class="sem-card">
+                    <h3>Semester 1</h3>
+                    <div class="subject-list">
+                        <div class="subject-item">
+                            <h4>Engineering Mathematics - I</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                        <div class="subject-item">
+                            <h4>Engineering Physics / Chemistry</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                        <div class="subject-item">
+                            <h4>Basic Electrical Engineering</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                        <div class="subject-item">
+                            <h4>Engineering Mechanics / C Programming</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semester 2 -->
+                <div class="sem-card">
+                    <h3>Semester 2</h3>
+                    <div class="subject-list">
+                        <div class="subject-item">
+                            <h4>Engineering Mathematics - II</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                        <div class="subject-item">
+                            <h4>Engineering Chemistry / Physics</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                        <div class="subject-item">
+                            <h4>Basic Electronics Engineering</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                        <div class="subject-item">
+                            <h4>Python / Advanced C Programming</h4>
+                            <a href="#" class="btn-notes">Download Notes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 SRTMUN Parbhani Notes Portal | Designed & Created with ❤️ by <strong>Pathan Araft</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
