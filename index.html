@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRTMUN Notes Portal - 1st Year</title>
+    <title>SRTMUN Parbhani Notes Portal - 1st Year Sem 1</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +13,7 @@
     <div id="login-container" class="auth-wrapper">
         <div class="auth-card">
             <h2>SRTMUN Portal Login</h2>
-            <p>Access 1st Year (Sem 1 & Sem 2) Notes</p>
+            <p>1st Year - Semester 1 Notes Hub</p>
             <form id="login-form">
                 <div class="input-group">
                     <label>Student Name</label>
@@ -32,7 +31,7 @@
         </div>
     </div>
 
-    <!-- Main Dashboard (Hidden by default until login) -->
+    <!-- Main Dashboard -->
     <div id="dashboard-container" class="dashboard-wrapper hidden">
         <header>
             <div class="logo">
@@ -48,60 +47,76 @@
         <main class="main-content">
             <section class="hero-banner">
                 <div class="hero-text">
-                    <h1>1st Year Engineering / Degree Notes</h1>
-                    <p>Semester 1 & Semester 2 All Subjects Study Material as per SRTMUN Syllabus.</p>
+                    <h1>Semester 1 All Subjects & Notes</h1>
+                    <p>C Programming, CN, WT, IKS, General Engineering, Hindi & English Study Material.</p>
                 </div>
             </section>
 
-            <!-- Semesters & Subjects Section -->
-            <div class="semesters-container">
-                <!-- Semester 1 -->
-                <div class="sem-card">
-                    <h3>Semester 1</h3>
-                    <div class="subject-list">
-                        <div class="subject-item">
-                            <h4>Engineering Mathematics - I</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                        <div class="subject-item">
-                            <h4>Engineering Physics / Chemistry</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                        <div class="subject-item">
-                            <h4>Basic Electrical Engineering</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                        <div class="subject-item">
-                            <h4>Engineering Mechanics / C Programming</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                    </div>
+            <!-- Semester 1 Subjects & Notes Cards -->
+            <div class="subjects-grid">
+                
+                <!-- 1. C Programming -->
+                <div class="subject-card">
+                    <h3>C Programming</h3>
+                    <p class="notes-preview"><strong>Quick Notes:</strong> C is a procedural programming language. Topics: Variables, Loops, Functions, Pointers, Arrays, and Structures.</p>
+                    <button class="btn-notes" onclick="openNotes('C Programming')">View Full Notes</button>
                 </div>
 
-                <!-- Semester 2 -->
-                <div class="sem-card">
-                    <h3>Semester 2</h3>
-                    <div class="subject-list">
-                        <div class="subject-item">
-                            <h4>Engineering Mathematics - II</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                        <div class="subject-item">
-                            <h4>Engineering Chemistry / Physics</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                        <div class="subject-item">
-                            <h4>Basic Electronics Engineering</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                        <div class="subject-item">
-                            <h4>Python / Advanced C Programming</h4>
-                            <a href="#" class="btn-notes">Download Notes</a>
-                        </div>
-                    </div>
+                <!-- 2. Computer Networks (CN) -->
+                <div class="subject-card">
+                    <h3>Computer Networks (CN)</h3>
+                    <p class="notes-preview"><strong>Quick Notes:</strong> Study of interconnected computing devices. Topics: OSI Model, TCP/IP, LAN/WAN, IP Addressing, and Routers.</p>
+                    <button class="btn-notes" onclick="openNotes('Computer Networks')">View Full Notes</button>
                 </div>
+
+                <!-- 3. Web Technology (WT) -->
+                <div class="subject-card">
+                    <h3>Web Technology (WT)</h3>
+                    <p class="notes-preview"><strong>Quick Notes:</strong> Designing web applications. Topics: HTML5, CSS3, JavaScript basics, DOM manipulation, and Responsive Design.</p>
+                    <button class="btn-notes" onclick="openNotes('Web Technology')">View Full Notes</button>
+                </div>
+
+                <!-- 4. Indian Knowledge System (IKS) -->
+                <div class="subject-card">
+                    <h3>Indian Knowledge System (IKS)</h3>
+                    <p class="notes-preview"><strong>Quick Notes:</strong> Ancient Indian heritage, science, mathematics, philosophy, literature, metallurgy, and traditional architecture.</p>
+                    <button class="btn-notes" onclick="openNotes('Indian Knowledge System')">View Full Notes</button>
+                </div>
+
+                <!-- 5. General Engineering -->
+                <div class="subject-card">
+                    <h3>General Engineering</h3>
+                    <p class="notes-preview"><strong>Quick Notes:</strong> Basics of Mechanical, Electrical, and Civil engineering principles, laws, forces, and basic circuits.</p>
+                    <button class="btn-notes" onclick="openNotes('General Engineering')">View Full Notes</button>
+                </div>
+
+                <!-- 6. Hindi -->
+                <div class="subject-card">
+                    <h3>Hindi</h3>
+                    <p class="notes-preview"><strong>Quick Notes:</strong> Gadya, Padhya, Vyakaran (Grammar), Patra lekhan, Nibandh, aur sahitya ka adhyayan.</p>
+                    <button class="btn-notes" onclick="openNotes('Hindi')">View Full Notes</button>
+                </div>
+
+                <!-- 7. English -->
+                <div class="subject-card">
+                    <h3>English</h3>
+                    <p class="notes-preview"><strong>Quick Notes:</strong> Technical Communication, Grammar, Reading Comprehension, Vocabulary, and Professional Writing Skills.</p>
+                    <button class="btn-notes" onclick="openNotes('English')">View Full Notes</button>
+                </div>
+
             </div>
         </main>
+
+        <!-- Popup Modal for Full Notes -->
+        <div id="notes-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Subject Title</h2>
+                <div id="modal-body">
+                    <!-- Detailed notes content will load here -->
+                </div>
+            </div>
+        </div>
 
         <footer>
             <p>&copy; 2026 SRTMUN Parbhani Notes Portal | Designed & Created with ❤️ by <strong>Pathan Araft</strong></p>
